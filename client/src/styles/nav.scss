@@ -1,0 +1,27 @@
+@import 'library';
+
+nav {
+  @include flex-center(row);
+  position: relative;
+  min-height: 5em;
+  padding: 0.5em 0;
+  width: 100%;
+  background-color: $primary-color;
+
+  .auth-btn {
+    @include btn($small-size, $tertiary-color, $secondary-color);
+    padding: 0.5em 1.8em;
+    margin: 0 1em;
+    @include transition(all, 150ms);
+  }
+
+  .sign-in-btn {
+    background-color: white;
+    color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+      @include transition(all, 150ms);
+    }
+  }
+}
